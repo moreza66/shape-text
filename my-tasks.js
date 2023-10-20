@@ -88,3 +88,31 @@ Array(numRows).fill().forEach((_, i) => {
 });
 }
 
+// 15. Heart
+
+//  ***   ***
+// ***** *****
+// ***********
+//  *********
+//   *******
+//    *****
+//     ***
+//      *
+
+const numRows = 8;
+Array(numRows).fill().forEach((_, i) => {
+ if (i===0) {
+  const stars= Array((2*i) + 3).fill('*').join('');
+  const row= ' ' + stars + '   ' + stars + ' '; 
+   console.log(row);
+ } else if (i===1){
+   const stars= Array((2*i) + 3).fill('*').join('');
+  const row= stars + ' ' + stars ; 
+   console.log(row);
+ } else {
+   const spaces= Array(i - 2).fill(' ').join('');
+  const stars= Array(((2*i) + 7) - ((4*i) - 8)).fill('*').join('');
+  const row = spaces + stars + spaces;
+   console.log(row);
+ }
+});
