@@ -7,3 +7,7 @@
 //   *  *
 //  *   *
 // ******
+function generateEmptyTriangle(rows) {
+}
+  
+  generateEmptyTriangle();
