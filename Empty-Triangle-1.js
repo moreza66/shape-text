@@ -8,6 +8,10 @@
 //  *   *
 // ******
 function generateEmptyTriangle(rows) {
+  for () {
+    let row = '';
+  }
+  console.log(row);
 }
   
   generateEmptyTriangle();
