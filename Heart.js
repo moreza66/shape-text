@@ -9,5 +9,6 @@
 //     ***
 //      *
 const numberOfRows = 8;
+let heartArt = '';
 
-console.log();
+console.log(heartArt);
