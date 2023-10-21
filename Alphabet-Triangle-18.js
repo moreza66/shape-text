@@ -6,17 +6,21 @@
 // G H I J
 // K L M N O
 
-function printAlphabetTriangle3() {
-    let currentLetter = 'A';
-  
-    for (let i = 1; i <= 5; i++) {
-      let row = '';
-      for (let j = 1; j <= i; j++) {
-        row += currentLetter;
-        currentLetter = String.fromCharCode(currentLetter.charCodeAt(0) + 1);
-      }
-  
-      console.log(row);
+function printAlphabetTriangle3(row, maxRows, currentChar) {
+    if (row > maxRows) {
+      return;
     }
+  
+    let rowChars = [];
+    for (let i = 0; i < row; i++) {
+      rowChars.push(currentChar);
+      currentChar = String.fromCharCode(currentChar.charCodeAt(0) + 1);
+    }
+  
+    console.log(rowChars.join(' '));
+  
+    printAlphabetTriangle3(row + 1, maxRows, currentChar);
   }
-  printAlphabetTriangle3()
+  
+  printAlphabetTriangle3(1, 5, 'A');
+  

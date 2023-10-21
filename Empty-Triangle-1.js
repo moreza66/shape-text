@@ -8,17 +8,12 @@
 //  *   *
 // ******
 function generateEmptyTriangle(rows) {
-  for (let i = 1; i <= rows; i++) {
-    let row = '';
-    for (let j = 1; j <= rows; j++) {
-      if (j === rows || i === rows || j === rows - i + 1) {
-        row += '*';
-      } else {
-        row += ' ';
-      }
-    }
+  Array.from({ length: rows }, (_, i) => {
+    const spaces = ' '.repeat(rows - i - 1);
+    const stars = i === 0 || i === rows - 1 ? '*'.repeat(i + 1) : '*' + ' '.repeat(i - 1) + '*';
+    const row = spaces + stars;
     console.log(row);
-  }
+  });
 }
 
 generateEmptyTriangle(6);
